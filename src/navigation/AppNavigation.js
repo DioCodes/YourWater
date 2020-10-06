@@ -2,7 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import * as Haptics from "expo-haptics";
 
@@ -40,7 +40,7 @@ export const AppNavigation = () => {
             title: "Главная",
             tabBarLabel: "Главная",
             tabBarIcon: ({ color, size }) => (
-              <Ionicons name="ios-contact" size={30} color={color} />
+              <AntDesign name="user" size={size} color={color} />
             ),
           }}
           listeners={tabPress}
@@ -49,8 +49,8 @@ export const AppNavigation = () => {
           name="Drink"
           component={DrinkWaterComponent}
           options={{
-            title: "Главная",
-            tabBarLabel: "Главная",
+            title: "Drink",
+            tabBarLabel: "Drink",
             tabBarButton: () => <DrinkWaterNavButton />,
           }}
         />
@@ -58,10 +58,10 @@ export const AppNavigation = () => {
           name="Achievments"
           component={AchievmentsScreen}
           options={{
-            title: "Магазин",
-            tabBarLabel: "Магазин",
+            title: "Достижения",
+            tabBarLabel: "Достижения",
             tabBarIcon: ({ color, size }) => (
-              <Ionicons name="ios-basket" size={30} color={color} />
+              <AntDesign name="Trophy" size={size} color={color} />
             ),
           }}
           listeners={tabPress}
