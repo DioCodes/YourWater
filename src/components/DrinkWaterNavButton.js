@@ -11,7 +11,7 @@ export const DrinkWaterNavButton = () => {
         onPress={() => Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium)}
       >
         <View style={styles.button}>
-          <Ionicons name="ios-water" size={40} color="white" />
+          <Ionicons name="ios-water" size={40} color="black" />
         </View>
       </TouchableOpacity>
     </View>
@@ -20,7 +20,6 @@ export const DrinkWaterNavButton = () => {
 
 const styles = StyleSheet.create({
   main: {
-    bottom: 30,
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 100,
@@ -28,8 +27,8 @@ const styles = StyleSheet.create({
   button: {
     width: 80,
     height: 80,
-    backgroundColor: "black",
-    borderColor: "black",
+    backgroundColor: "white",
+    borderColor: "transparent",
     borderWidth: 2,
     borderRadius: 80 / 2,
     alignItems: "center",

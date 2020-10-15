@@ -1,23 +1,37 @@
 import React, { useLayoutEffect } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, SafeAreaView, View } from "react-native";
+
+import {Leaves} from '../../assets/images/Leaves'
 
 export const AchievmentsScreen = ({ navigation }) => {
-  return <View style={styles.main}></View>;
+  return (
+    <SafeAreaView style={styles.main}>
+
+      <View style={styles.mainAchievmentContainer}>
+        <Leaves height={175+40} width={175+40}/>
+        <View style={{position: 'absolute', paddingBottom: 20,}}>
+          <View style={styles.mainAchievment}/>
+        </View>
+      </View>
+
+    </SafeAreaView>
+  )
 };
 
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: "white",
-    paddingHorizontal: 20,
+    alignItems: 'center',
   },
-  button: {
-    width: 60,
-    height: 60,
-    borderColor: "black",
-    borderWidth: 2,
-    borderRadius: 60 / 2,
-    alignItems: "center",
-    justifyContent: "center",
+  mainAchievmentContainer: {
+    marginTop: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  mainAchievment: {
+    width: 150,
+    height: 150,
+    borderRadius: 100,
+    backgroundColor: 'rgba(0, 0, 0, .25)'
   },
 });
