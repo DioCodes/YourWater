@@ -1,14 +1,18 @@
 import React from "react";
 import { StyleSheet, SafeAreaView, View, TouchableOpacity } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from "expo-haptics";
 
-export const DrinkWaterNavButton = () => {
+export const DrinkWaterButton = ({onPressAction}) => {
+  const onPressHandler = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
+    onPressAction();
+  }
   return (
     <View style={styles.main}>
       <TouchableOpacity
-        activeOpacity={0.8}
-        onPress={() => Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium)}
+        activeOpacity={0.6}
+        onPress={onPressHandler}
       >
         <View style={styles.button}>
           <Ionicons name="ios-water" size={40} color="black" />

@@ -9,7 +9,7 @@ export const waterReducer = (state = INITIAL_STATE, action) => {
     case DRINK_WATER:
       return {
         ...state,
-        waterLevel: waterLevel + action.payload,
+        waterLevel: state.waterLevel + action.payload,
       };
     case RESET_WATER:
       return {
